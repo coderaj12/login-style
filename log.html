@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+    <button class="btn-login" onclick="showmodal()">LOGIN</button>
+    <div class="overlay" onclick="closemodal()"></div>
+    <div class="loginform" >
+        <span>&times;</span>
+        <form action="">
+            <div> <label for="">UserName</label>
+                <input type="text" />
+            </div>
+            <div> <label for="">Password</label>
+                <input type="password" />
+            </div>
+            <button>LOGIN</button>
+
+
+        </form>
+    </div>
+
+</body>
+<script>
+    function showmodal() {
+        document.querySelector('.overlay').classList.add('showoverlay');
+        document.querySelector('.loginform').classList.add('showloginform');
+    }
+    function closemodal() {
+        document.querySelector('.overlay').classList.remove('showoverlay');
+        document.querySelector('.loginform').classList.remove('showloginform');
+    }
+    var c=document.querySelector("span");
+    c.addEventListener("click",closemodal)
+</script>
+
+</html>
